@@ -24,7 +24,7 @@ const Hero = () => {
 
                 {/* Rest of the component remains unchanged */}
                 <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                    Fresh Track
+                    Fresh Track SL
                 </h1>
 
                 <div className="max-w-3xl mx-auto mb-12">

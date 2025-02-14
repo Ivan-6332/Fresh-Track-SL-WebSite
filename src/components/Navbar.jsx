@@ -1,93 +1,168 @@
-import { RiCloseLine, RiMenu3Line } from '@remixicon/react';
-import React, { useState } from 'react';
-
-const NAVIGATION_LINKS = [
-  { href: "#team", label: "Team" },
-  { href: "#what_we_do", label: "What We Do" },
-  { href: "#blog", label: "blog" },
-  { href : "#contact", label: "Contact"}
-];
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    // Handle navbar transparency on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
 
-  const handleLinkClick = (e, href) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href)
-    if (targetElement) {
-      const offset = -85;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY + offset;
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      })
-    }
-    setIsMobileMenuOpen(false)
-  }
-  return (
-    <div>
-      <nav className="fixed left-0 right-0 z-50 lg:top-4">
-       {/* Desktop Menu  */}
-       <div className="mx-auto hidden max-w-xl items-center justify-center rounded-full border border-white/30 py-2 backdrop-blur-lg lg:flex">
-          <div className="flex items-center justify-between gap-6">
-            <div>
-              <a href="/">
-                <span className="uppercase">Fresh Track</span>
-              </a>
-            </div>
-            <div>
-              <ul className="flex items-center gap-4">
-                {NAVIGATION_LINKS.map((item, index) => (
-                  <li key={index}>
-                    <a className="text-white text-sm hover:text-stone-300" href={item.href} onClick={(e) => handleLinkClick(e, item.href)}>
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+    const handleHomeClick = () => {
+        navigate('/');
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+        setIsOpen(false);
+    };
 
-        {/* Mobile Menu */}
-        <div className="py-2 backdrop-blur-md lg:hidden">
-          <div className="flex items-center justify-between">
-            <div>
-              <a href="#">
-                <span className="pl-2 uppercase">Fresh Track</span>
-              </a>
-            </div>
-            <div className="flex items-center">
-              <button className="forcus:outline-none lg:hidden" onClick={toggleMobileMenu} aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}>
-                {isMobileMenuOpen ? (
-                  <RiCloseLine className="m-2 h-6 w-5" />
-                ) : (
-                  <RiMenu3Line className="m-2 h-6 w-5" />
+    const scrollToSection = (sectionId) => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        } else {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setIsOpen(false);
+    };
+
+    const handleTeamClick = () => {
+        if (location.pathname === '/team') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/team');
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 100);
+        }
+        setIsOpen(false);
+    };
+
+    return (
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+            isScrolled ? 'bg-black/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        }`}>
+            <div className="container mx-auto px-4">
+                <div className="flex justify-between items-center h-20">
+                    {/* Logo - increased size */}
+                    <button 
+                        onClick={handleHomeClick}
+                        className="text-white text-1xl font-bold hover:text-green-500 transition-colors"
+                    >
+                        Fresh Track SL
+                    </button>
+
+                    {/* Desktop Navigation - increased size */}
+                    <div className="hidden md:flex space-x-10">
+                        <button 
+                            onClick={handleHomeClick}
+                            className="text-white text-lg hover:text-green-500 transition-colors relative group"
+                        >
+                            Home
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                        <button 
+                            onClick={() => scrollToSection('what_we_do')}
+                            className="text-white text-lg hover:text-green-500 transition-colors relative group"
+                        >
+                            What We Do
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                        <button
+                            onClick={handleTeamClick}
+                            className="text-white text-lg hover:text-green-500 transition-colors relative group"
+                        >
+                            Team
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                        <button 
+                            onClick={() => scrollToSection('blog')}
+                            className="text-white text-lg hover:text-green-500 transition-colors relative group"
+                        >
+                            Blog
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                        <button 
+                            onClick={() => scrollToSection('contact')}
+                            className="text-white text-lg hover:text-green-500 transition-colors relative group"
+                        >
+                            Contact
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Button - increased size */}
+                    <button 
+                        className="md:hidden text-white hover:text-green-500 transition-colors"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Mobile Menu - increased size */}
+                {isOpen && (
+                    <div className="md:hidden bg-black/95 py-4 backdrop-blur-sm rounded-b-lg">
+                        <div className="flex flex-col space-y-4 px-4">
+                            <button 
+                                onClick={handleHomeClick}
+                                className="text-white text-lg hover:text-green-500 transition-colors text-left py-2"
+                            >
+                                Home
+                            </button>
+                            <button 
+                                onClick={() => scrollToSection('what_we_do')}
+                                className="text-white text-lg hover:text-green-500 transition-colors text-left py-2"
+                            >
+                                What We Do
+                            </button>
+                            <button
+                                onClick={handleTeamClick}
+                                className="text-white text-lg hover:text-green-500 transition-colors text-left py-2"
+                            >
+                                Team
+                            </button>
+                            <button 
+                                onClick={() => scrollToSection('blog')}
+                                className="text-white text-lg hover:text-green-500 transition-colors text-left py-2"
+                            >
+                                Blog
+                            </button>
+                            <button 
+                                onClick={() => scrollToSection('contact')}
+                                className="text-white text-lg hover:text-green-500 transition-colors text-left py-2"
+                            >
+                                Contact
+                            </button>
+                        </div>
+                    </div>
                 )}
-              </button>
             </div>
-          </div>
-          {isMobileMenuOpen && (
-            <ul className="my-4 ml-4 flex flex-col gap-6 backdrop-blur-md">
-              {NAVIGATION_LINKS.map((item, index) => (
-                <li key={index}>
-                  <a href={item.href} className="block w-full text-lg" onClick={(e) => handleLinkClick(e, item.href)}>
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </nav>
-    </div>
-  )
-}
+        </nav>
+    );
+};
 
 export default Navbar;

@@ -1,38 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const teamMembers = [
     {
+        id: 'ivan-de-zoysa',
         name: "Ivan De Zoysa",
         role: "Team Leader",
         image: "/src/assets/team/Ivan.jpg",
         description: "Visionary leader with 15+ years of industry experience, driving innovation and growth."
     },
     {
+        id: 'parama-herath',
         name: "Parama Herath",
         role: "Team Member",
         image: "/team/member2.jpg",
         description: "Expert in cutting-edge technologies, leading our technical initiatives with precision."
     },
     {
+        id: 'dinithi-viranda',
         name: "Dinithi Viranda",
         role: "Team Member",
         image: "/team/member3.jpg",
         description: "Award-winning creative professional bringing designs to life."
     },
     {
+        id: 'gayantha-hathnagoda',
         name: "Gayantha Hathnagoda",
         role: "Team Member",
         image: "/team/member4.jpg",
         description: "Strategic marketing expert with a passion for brand storytelling."
     },
     {
+        id: 'nethmee-mudannayaka',
         name: "Nethmee Mudannayaka",
         role: "Team Member",
         image: "/src/assets/team/Nethmee.jpg",
         description: "Full-stack developer extraordinaire, turning ideas into reality."
     },
     {
+        id: 'dilshan-hirimuthugoda',
         name: "Dilshan Hirimuthugoda",
         role: "Team Member",
         image: "/team/member6.jpg",
@@ -40,7 +47,7 @@ const teamMembers = [
     }
 ];
 
-const Team = () => {
+const Team = ({ showNavbar = true }) => {
     return (
         <section id="team" className="py-20 bg-black">
             {/* Hero Team Image */}
@@ -71,7 +78,7 @@ const Team = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {teamMembers.map((member, index) => (
                         <Link 
-                            to={`/team/${member.name.toLowerCase().replace(' ', '-')}`} 
+                            to={`/team/${member.id}`}
                             key={index} 
                             className="flex flex-col items-center group cursor-pointer"
                         >

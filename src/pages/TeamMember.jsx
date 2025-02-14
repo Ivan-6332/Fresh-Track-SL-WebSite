@@ -1,5 +1,7 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import VideoBackground from '../components/VideoBackground';
 
 const teamMembers = {
     'ivan-de-zoysa': {
@@ -127,15 +129,35 @@ const teamMembers = {
 
 const TeamMember = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const member = teamMembers[id];
 
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleBackToTeam = () => {
+        navigate('/team');
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    };
+
     if (!member) {
-        return <div className="min-h-screen bg-black text-white flex items-center justify-center">
-            <div className="text-center">
-                <h1 className="text-3xl font-bold mb-4">Member not found</h1>
-                <Link to="/team" className="text-green-500 hover:text-green-400">Return to Team</Link>
+        return (
+            <div className="min-h-screen bg-black text-white flex items-center justify-center">
+                <div className="text-center">
+                    <h1 className="text-3xl font-bold mb-4">Member not found</h1>
+                    <button 
+                        onClick={handleBackToTeam}
+                        className="text-green-500 hover:text-green-400 transition-colors"
+                    >
+                        Return to Team
+                    </button>
+                </div>
             </div>
-        </div>;
+        );
     }
 
     return (
@@ -143,29 +165,63 @@ const TeamMember = () => {
             <div className="container mx-auto px-4">
                 {/* Navigation */}
                 <div className="mb-10">
-                    <Link to="/team" className="text-green-500 hover:text-green-400 flex items-center">
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button 
+                        onClick={handleBackToTeam}
+                        className="text-green-500 hover:text-green-400 flex items-center group transition-colors"
+                    >
+                        <svg 
+                            className="w-4 h-4 mr-2 transform transition-transform group-hover:-translate-x-1" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                         </svg>
                         Back to Team
-                    </Link>
+                    </button>
                 </div>
 
                 {/* Hero Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                    <div className="relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-16">
+                    <div className="relative max-w-md md:ml-0 mx-auto md:mx-0">
                         <div className="absolute inset-0 bg-green-500 rounded-lg blur-xl opacity-20"></div>
                         <img 
                             src={member.largeImage || member.image} 
                             alt={member.name}
-                            className="relative rounded-lg w-full h-auto object-cover"
+                            className="relative rounded-lg w-full h-auto object-cover aspect-square"
                         />
                     </div>
-                    <div>
+                    <div className="md:pl-0 md:-ml-40">
                         <h1 className="text-4xl font-bold mb-2">{member.name}</h1>
                         <p className="text-green-500 text-xl mb-6">{member.role}</p>
                         <p className="text-gray-300 leading-relaxed mb-8">{member.description}</p>
                         
+                        {/* External Links */}
+                        <div className="flex gap-4 mb-8">
+                            <a 
+                                href={member.portfolioUrl || "#"} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                            >
+                                <span className="mr-2">Portfolio</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                            <a 
+                                href={member.cvUrl || "#"} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-3 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition-colors"
+                            >
+                                <span className="mr-2">View CV</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+
                         {/* Skills */}
                         <div className="mb-8">
                             <h2 className="text-2xl font-semibold mb-4">Skills</h2>

@@ -5,21 +5,28 @@ const Hero = () => {
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
             {/* Content */}
             <div className="container mx-auto px-4 relative z-20 text-center">
-                {/* Logo */}
-                <div className="mb-12 transform hover:scale-105 transition duration-500">
-                    <img 
-                        src="/src/assets/logo.png"
-                        alt="Fresh Track Logo"
-                        className="mx-auto h-32 w-auto"
-                    />
+                {/* Logo with 3D effect */}
+                <div className="mb-12 perspective-[1000px] group">
+                    <div className="relative transform-gpu transition-transform duration-500 ease-out group-hover:rotate-y-180 preserve-3d">
+                        <img 
+                            src="/src/assets/logo/NEW NAME LOGO .jpg"
+                            alt="Fresh Track Logo"
+                            className="mx-auto h-32 w-auto backface-hidden shadow-lg rounded-lg"
+                        />
+                        {/* Back side of the logo */}
+                        <img 
+                            src="/src/assets/logo/NEW NAME LOGO .jpg"
+                            alt="Fresh Track Logo"
+                            className="absolute inset-0 mx-auto h-32 w-auto rotate-y-180 backface-hidden shadow-lg rounded-lg"
+                        />
+                    </div>
                 </div>
 
-                {/* Company Name */}
+                {/* Rest of the component remains unchanged */}
                 <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                     Fresh Track
                 </h1>
 
-                {/* Aim/Mission Statement */}
                 <div className="max-w-3xl mx-auto mb-12">
                     <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
                         Revolutionizing the future through innovative solutions and cutting-edge technology. 
@@ -27,7 +34,6 @@ const Hero = () => {
                     </p>
                 </div>
 
-                {/* CTA Button */}
                 <div className="mb-16">
                     <a 
                         href="#what_we_do" 
@@ -37,7 +43,7 @@ const Hero = () => {
                     </a>
                 </div>
 
-                {/* Social Media Icons */}
+                {/* Social Media Icons section remains the same */}
                 <div className="flex justify-center items-center gap-8">
                     {/* LinkedIn */}
                     <a 
@@ -94,21 +100,6 @@ const Hero = () => {
                             </svg>
                         </span>
                     </a>
-                </div>
-
-                {/* Scroll Down Indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                    <svg 
-                        className="w-6 h-6 text-white"
-                        fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="2" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                    >
-                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
                 </div>
             </div>
         </section>

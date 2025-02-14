@@ -1,39 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const teamMembers = [
     {
         name: "Ivan De Zoysa",
-        role: "CEO & Founder",
+        role: "Team Leader",
         image: "/src/assets/team/Ivan.jpg",
         description: "Visionary leader with 15+ years of industry experience, driving innovation and growth."
     },
     {
         name: "Parama Herath",
-        role: "Technical Director",
+        role: "Team Member",
         image: "/team/member2.jpg",
         description: "Expert in cutting-edge technologies, leading our technical initiatives with precision."
     },
     {
         name: "Dinithi Viranda",
-        role: "Creative Director",
+        role: "Team Member",
         image: "/team/member3.jpg",
         description: "Award-winning creative professional bringing designs to life."
     },
     {
         name: "Gayantha Hathnagoda",
-        role: "Marketing Head",
+        role: "Team Member",
         image: "/team/member4.jpg",
         description: "Strategic marketing expert with a passion for brand storytelling."
     },
     {
         name: "Nethmee Mudannayaka",
-        role: "Lead Developer",
+        role: "Team Member",
         image: "/src/assets/team/Nethmee.jpg",
         description: "Full-stack developer extraordinaire, turning ideas into reality."
     },
     {
         name: "Dilshan Hirimuthugoda",
-        role: "UX Designer",
+        role: "Team Member",
         image: "/team/member6.jpg",
         description: "User experience specialist creating intuitive and engaging designs."
     }
@@ -69,7 +70,11 @@ const Team = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className="flex flex-col items-center group">
+                        <Link 
+                            to={`/team/${member.name.toLowerCase().replace(' ', '-')}`} 
+                            key={index} 
+                            className="flex flex-col items-center group cursor-pointer"
+                        >
                             <div className="relative mb-6">
                                 <div className="absolute inset-0 bg-green-500 rounded-full blur-lg group-hover:blur-xl transition-all duration-300 opacity-20 group-hover:opacity-30"></div>
                                 <div className="relative w-40 h-40 overflow-hidden rounded-full border-4 border-zinc-800 group-hover:border-green-500 transition-all duration-300">
@@ -85,7 +90,7 @@ const Team = () => {
                                 <p className="text-green-500 font-medium mb-2">{member.role}</p>
                                 <p className="text-gray-400 text-sm max-w-xs mx-auto leading-relaxed">{member.description}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

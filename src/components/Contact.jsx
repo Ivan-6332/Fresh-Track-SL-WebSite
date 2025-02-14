@@ -143,23 +143,33 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Information */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-zinc-900 p-6 rounded-lg text-center">
-                        <div className="text-green-500 text-2xl mb-4">📍</div>
-                        <h3 className="text-white font-semibold mb-2">Address</h3>
-                        <p className="text-gray-300">123 Business Street, Suite 100<br />City, State 12345</p>
-                    </div>
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-zinc-900 p-6 rounded-lg text-center">
                         <div className="text-green-500 text-2xl mb-4">📧</div>
                         <h3 className="text-white font-semibold mb-2">Email</h3>
-                        <p className="text-gray-300">contact@yourcompany.com<br />support@yourcompany.com</p>
+                        <p className="text-gray-300">
+                            <a href="mailto:contact@yourcompany.com" className="text-green-400 hover:underline">
+                                contact@yourcompany.com
+                            </a>
+                            <br />
+                            <a href="mailto:support@yourcompany.com" className="text-green-400 hover:underline">
+                                support@yourcompany.com
+                            </a>
+                        </p>
                     </div>
                     <div className="bg-zinc-900 p-6 rounded-lg text-center">
                         <div className="text-green-500 text-2xl mb-4">📱</div>
                         <h3 className="text-white font-semibold mb-2">Phone</h3>
-                        <p className="text-gray-300">+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+                        <p className="text-gray-300"> +94 (11) 234 5678<br />+94 (11) 276 8899</p>
                     </div>
                 </div>
+                
+                <div className="mt-10 text-center text-gray-400 text-sm">
+                    <p className="bg-zinc-900 p-4 rounded-lg inline-block px-6 shadow-lg">
+                        © {new Date().getFullYear()} Fresh Track. All Rights Reserved.
+                    </p>
+                </div>
+
             </div>
         </section>
     );

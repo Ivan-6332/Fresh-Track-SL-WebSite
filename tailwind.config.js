@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      rotate:{
+        'y-180': '180deg',
+      },
+      prespective: {
+        '1000': '1000px',
+      },
+    },
   },
   plugins: [],
 }

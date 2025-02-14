@@ -18,9 +18,11 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@remixicon/react": "^4.6.0",
+    "framer-motion": "^12.4.2",
     "gsap": "^3.12.7",
     "i": "^0.3.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.1.5"
   }
 }

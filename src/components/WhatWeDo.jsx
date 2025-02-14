@@ -2,34 +2,34 @@ import React from 'react';
 
 const features = [
     {
-        icon: "💡",
-        title: "Innovative Solutions",
-        description: "We create cutting-edge digital solutions that transform businesses and drive growth."
+        icon: "🌾",
+        title: "Smart Agriculture & Food Distribution",
+        description: "Optimizing food supply chains with AI-driven analytics for real-time demand forecasting."
     },
     {
-        icon: "🚀",
-        title: "Rapid Development",
-        description: "Fast-paced development with high-quality results, ensuring quick time-to-market."
+        icon: "📊",
+        title: "Real-Time Market Insights",
+        description: "Providing live updates on food demand trends to help farmers and suppliers make informed decisions."
     },
     {
-        icon: "🎯",
-        title: "Custom Software",
-        description: "Tailored software solutions designed specifically for your unique business needs."
+        icon: "🔗",
+        title: "Seamless Supply Chain Integration",
+        description: "Connecting farmers, distributors, and buyers to reduce waste and improve efficiency."
     },
     {
         icon: "📱",
-        title: "Mobile Apps",
-        description: "Cross-platform mobile applications that provide seamless user experiences."
+        title: "Mobile-Friendly Access",
+        description: "User-friendly mobile applications to track, analyze, and manage food stock on the go."
     },
     {
-        icon: "🔒",
-        title: "Cyber Security",
-        description: "Advanced security measures to protect your digital assets and data."
+        icon: "🛡️",
+        title: "Data Security & Compliance",
+        description: "Ensuring secure transactions and data protection with industry-standard cybersecurity measures."
     },
     {
-        icon: "🤝",
-        title: "24/7 Support",
-        description: "Round-the-clock technical support and maintenance for your peace of mind."
+        icon: "🕒",
+        title: "24/7 Support & Assistance",
+        description: "Dedicated support team available round the clock to assist with system operations and troubleshooting."
     }
 ];
 

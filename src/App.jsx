@@ -7,6 +7,8 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import TeamMember from './pages/TeamMember';
 import MainLayout from './layouts/MainLayout';
+import StayTuned from './pages/StayTuned';
+import BlogPost from './pages/BlogPost';
 
 const HomePage = () => (
   <>
@@ -40,6 +42,16 @@ const App = () => {
           <Route path="/team/:id" element={
             <MainLayout>
               <TeamMember />
+            </MainLayout>
+          } />
+          <Route path="/stay-tuned" element={
+            <MainLayout>
+              <StayTuned />
+            </MainLayout>
+          } />
+          <Route path="/blog/:id" element={
+            <MainLayout>
+              <BlogPost />
             </MainLayout>
           } />
         </Routes>

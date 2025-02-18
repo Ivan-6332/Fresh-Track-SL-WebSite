@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const features = [
     {
@@ -34,6 +35,8 @@ const features = [
 ];
 
 const WhatWeDo = () => {
+    const navigate = useNavigate();
+
     return (
         <section id="what_we_do" className="py-20 bg-black min-h-screen">
             {/* Main Content Container */}
@@ -87,12 +90,12 @@ const WhatWeDo = () => {
                         <p className="text-gray-300 mb-6">
                             Discover how we can help transform your business with our innovative solutions.
                         </p>
-                        <a 
-                            href="#contact"
+                        <button 
+                            onClick={() => navigate('/stay-tuned')}
                             className="inline-block bg-green-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-600 transition duration-300"
                         >
-                            Get in Touch
-                        </a>
+                            Let's go!
+                        </button>
                     </div>
                 </div>
 

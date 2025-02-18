@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Sample blog posts (you can replace these with real posts later)
 const samplePosts = [
@@ -29,6 +30,8 @@ const samplePosts = [
 ];
 
 const Blog = () => {
+    const navigate = useNavigate();
+
     return (
         <section id="blog" className="py-20 bg-black min-h-screen">
             {/* Blog Header */}
@@ -67,7 +70,7 @@ const Blog = () => {
                                 <p className="text-gray-400 mb-4">{post.preview}</p>
                                 <button 
                                     className="text-green-500 font-medium hover:text-green-400 transition duration-300"
-                                    onClick={() => alert('Blog post coming soon!')}
+                                    onClick={() => navigate(`/blog/${post.id}`)}
                                 >
                                     Read More →
                                 </button>

@@ -26,11 +26,8 @@ const Contact = () => {
             {/* Header */}
             <div className="container mx-auto px-4 mb-16">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
-                    <p className="text-lg text-gray-300 leading-relaxed">
-                        We'd love to hear from you! Whether you have a question, feedback, or want to leave a review,
-                        we're here to help.
-                    </p>
+                    <h1 className="text-5xl font-bold text-green-500 mb-6">Contact Us</h1>
+                    
                 </div>
             </div>
 

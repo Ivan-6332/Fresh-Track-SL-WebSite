@@ -9,7 +9,7 @@ const teamMembers = {
         role: "Team Leader",
         image: "/src/assets/team/Ivan.jpg",
         largeImage: "/src/assets/team/Ivan-large.jpg",
-        description: "Visionary leader with 15+ years of industry experience, driving innovation and growth. Ivan specializes in strategic planning, team leadership, and innovative solution development. His expertise spans across multiple domains including software architecture, project management, and business development.",
+        description: "Team Leader of the project Fresh Track SL",
         portfolio: [
             { title: "Project Leadership", description: "Led multiple successful projects in software development and system integration" },
             { title: "Innovation Management", description: "Spearheaded the adoption of cutting-edge technologies and methodologies" },
@@ -28,8 +28,8 @@ const teamMembers = {
     'parama-herath': {
         name: "Parama Herath",
         role: "Team Member",
-        image: "/team/member2.jpg",
-        largeImage: "/team/member2-large.jpg",
+        image: "/src/assets/team/Parama.jpg",
+        largeImage: "/src/assets/team/Parama-large.jpg",
         description: "Expert in cutting-edge technologies, leading our technical initiatives with precision. Parama brings deep technical expertise in modern web technologies and cloud architecture.",
         portfolio: [
             { title: "Technical Architecture", description: "Designed scalable system architectures for enterprise applications" },
@@ -48,8 +48,8 @@ const teamMembers = {
     'dinithi-viranda': {
         name: "Dinithi Viranda",
         role: "Team Member",
-        image: "/team/member3.jpg",
-        largeImage: "/team/member3-large.jpg",
+        image: "/src/assets/team/Dinithi.jpg",
+        largeImage: "/src/assets/team/Dinithi-large.jpg",
         description: "Award-winning creative professional bringing designs to life. Dinithi excels in creating user-centric designs and implementing modern UI/UX principles.",
         portfolio: [
             { title: "UI/UX Design", description: "Created intuitive user interfaces for multiple high-traffic applications" },
@@ -68,8 +68,8 @@ const teamMembers = {
     'gayantha-hathnagoda': {
         name: "Gayantha Hathnagoda",
         role: "Team Member",
-        image: "/team/member4.jpg",
-        largeImage: "/team/member4-large.jpg",
+        image: "/src/assets/team/Gayantha.jpg",
+        largeImage: "/src/assets/team/Gayantha-large.jpg",
         description: "Strategic marketing expert with a passion for brand storytelling. Gayantha brings expertise in digital marketing and brand development.",
         portfolio: [
             { title: "Marketing Strategy", description: "Developed comprehensive marketing strategies for various industries" },
@@ -108,8 +108,8 @@ const teamMembers = {
     'dilshan-hirimuthugoda': {
         name: "Dilshan Hirimuthugoda",
         role: "Team Member",
-        image: "/team/member6.jpg",
-        largeImage: "/team/member6-large.jpg",
+        image: "/src/assets/team/Dilshan.jpg",
+        largeImage: "/src/assets/team/Dilshan-large.jpg",
         description: "User experience specialist creating intuitive and engaging designs. Dilshan focuses on creating seamless user experiences through innovative design solutions.",
         portfolio: [
             { title: "UX Research", description: "Conducted user research and usability testing" },
@@ -209,7 +209,7 @@ const TeamMember = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                             </a>
-                            <a 
+                            <a    
                                 href={member.cvUrl || "#"} 
                                 target="_blank" 
                                 rel="noopener noreferrer"

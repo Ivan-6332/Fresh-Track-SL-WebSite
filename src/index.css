@@ -4,7 +4,7 @@
 
 :root {
     font-family: "Noto Sans", sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(6, 85, 13);
     color: white;
 }
 
@@ -25,3 +25,22 @@
       transform: rotateY(180deg);
     }
   }
+/* Define the smooth left-to-right gradient animation */
+@keyframes smooth-gradient {
+  0% {
+      background-position: 100% 0%; /* Start with the gradient at the right */
+  }
+  50% {
+      background-position: 0% 0%;   /* Move the gradient to the left */
+  }
+  100% {
+      background-position: 100% 0%; /* Move the gradient back to the right */
+  }
+}
+
+/* Apply the smooth gradient animation */
+.animate-smooth-gradient {
+  background-size: 200% 100%; /* Double the size to allow movement */
+  background-image: linear-gradient(to right, #000000, #006400); /* Gradient from white to dark green */
+  animation: smooth-gradient 5s ease-in-out infinite; /* Apply animation with smooth transition */
+}

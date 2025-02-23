@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'; 
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
 import Team from './components/Team';
@@ -26,7 +26,6 @@ const TeamPage = () => (
 
 const App = () => {
   return (
-    <Router>
       <main className="relative min-h-screen overflow-x-hidden antialiased">
         <Routes>
           <Route path="/" element={
@@ -56,8 +55,7 @@ const App = () => {
           } />
         </Routes>
       </main>
-    </Router>
-  )
-}
+  );
+};
 
 export default App;

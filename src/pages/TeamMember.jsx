@@ -7,7 +7,7 @@ const teamMembers = {
         role: "Team Leader",
         image: "/src/assets/team/Ivan.jpg",
         largeImage: "/src/assets/team/Ivan-large.jpg",
-        description: "Visionary leader with 15+ years of industry experience, driving innovation and growth. Ivan specializes in strategic planning, team leadership, and innovative solution development. His expertise spans across multiple domains including software architecture, project management, and business development.",
+        description: "Team Leader of the Fresh Track SL Project",
         portfolio: [
             { title: "Project Leadership", description: "Led multiple successful projects in software development and system integration" },
             { title: "Innovation Management", description: "Spearheaded the adoption of cutting-edge technologies and methodologies" },

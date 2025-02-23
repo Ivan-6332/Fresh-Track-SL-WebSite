@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import VideoBackground from '../components/VideoBackground';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const teamMembers = {
     'ivan-de-zoysa': {
@@ -9,7 +7,7 @@ const teamMembers = {
         role: "Team Leader",
         image: "/src/assets/team/Ivan.jpg",
         largeImage: "/src/assets/team/Ivan-large.jpg",
-        description: "Team Leader of the project Fresh Track SL",
+        description: "Visionary leader with 15+ years of industry experience, driving innovation and growth. Ivan specializes in strategic planning, team leadership, and innovative solution development. His expertise spans across multiple domains including software architecture, project management, and business development.",
         portfolio: [
             { title: "Project Leadership", description: "Led multiple successful projects in software development and system integration" },
             { title: "Innovation Management", description: "Spearheaded the adoption of cutting-edge technologies and methodologies" },
@@ -23,7 +21,8 @@ const teamMembers = {
                 "Senior Developer - 6 years"
             ],
             skills: ["Leadership", "Project Management", "Software Architecture", "Team Building", "Strategic Planning"]
-        }
+        },
+        cvPath: "/src/assets/cv/Ivan.pdf"
     },
     'parama-herath': {
         name: "Parama Herath",
@@ -43,7 +42,8 @@ const teamMembers = {
                 "Cloud Architect - 3 years"
             ],
             skills: ["Cloud Architecture", "Full Stack Development", "System Design", "DevOps", "Agile Methodologies"]
-        }
+        },
+        cvPath: "/src/assets/cv/Parama.pdf"
     },
     'dinithi-viranda': {
         name: "Dinithi Viranda",
@@ -63,7 +63,8 @@ const teamMembers = {
                 "Creative Lead - 2 years"
             ],
             skills: ["UI Design", "UX Research", "Prototyping", "Visual Design", "User Testing"]
-        }
+        },
+        cvPath: "/src/assets/cv/Dinithi.pdf"
     },
     'gayantha-hathnagoda': {
         name: "Gayantha Hathnagoda",
@@ -83,7 +84,8 @@ const teamMembers = {
                 "Digital Marketing Manager - 3 years"
             ],
             skills: ["Digital Marketing", "Brand Strategy", "Content Marketing", "Analytics", "Social Media Management"]
-        }
+        },
+        cvPath: "/src/assets/cv/Gayantha.pdf"
     },
     'nethmee-mudannayaka': {
         name: "Nethmee Mudannayaka",
@@ -103,7 +105,8 @@ const teamMembers = {
                 "Backend Developer - 2 years"
             ],
             skills: ["Full Stack Development", "API Design", "Database Management", "Web Security", "Performance Optimization"]
-        }
+        },
+        cvPath: "/src/assets/cv/Nethmee.pdf"
     },
     'dilshan-hirimuthugoda': {
         name: "Dilshan Hirimuthugoda",
@@ -123,7 +126,8 @@ const teamMembers = {
                 "Interaction Designer - 2 years"
             ],
             skills: ["UX Design", "Interaction Design", "Prototyping", "User Research", "Design Systems"]
-        }
+        },
+        cvPath: "/src/assets/cv/Dilshan.pdf"
     }
 };
 
@@ -210,9 +214,8 @@ const TeamMember = () => {
                                 </svg>
                             </a>
                             <a    
-                                href={member.cvUrl || "#"} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                                href={member.cvPath} 
+                                download
                                 className="inline-flex items-center px-6 py-3 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition-colors"
                             >
                                 <span className="mr-2">View CV</span>
@@ -271,6 +274,7 @@ const TeamMember = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     );

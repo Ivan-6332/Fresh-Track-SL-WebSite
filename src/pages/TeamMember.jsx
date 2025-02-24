@@ -87,24 +87,24 @@ const teamMembers = {
         },
         cvPath: "/src/assets/cv/Gayantha.pdf"
     },
-    'nethmee-mudannayaka': {
-        name: "Nethmee Mudannayaka",
+    'nethmee-mudannayake': {
+        name: "Nethmee Mudannayake",
         role: "Team Member",
         image: "/src/assets/team/Nethmee.jpg",
         largeImage: "/src/assets/team/Nethmee-large.jpg",
-        description: "Full-stack developer extraordinaire, turning ideas into reality. Nethmee specializes in building robust and scalable applications.",
-        portfolio: [
-            { title: "Full Stack Development", description: "Developed end-to-end solutions for enterprise clients" },
-            { title: "API Design", description: "Created RESTful APIs for various applications" },
-            { title: "Database Architecture", description: "Designed and optimized database structures" }
+        description: "I am an undergraduate seeking an internship to apply my academic knowledge and practical skills in a professional setting where I can make meaningful contributions. My goal is to leverage the foundational skills I have developed through coursework and projects to add value to a dynamic team, while gaining hands-on experience that will enhance my understanding of industry practices.",
+        projects: [
+            { title: "Responsive Client-side Web Application for Estate Agent ", description: "Developed a web application for property search and management with interactive filters, detailed property displays, and a favorites list. Focused on user experience, accessibility, and security." },
+            { title: "Real Time Event Ticketing System", description: "Designed and implemented a comprehensive real-time event ticketing system that enhances customer experience and streamlines ticketing operations." },
+            { title: "Student Results Management System", description: " Developed a comprehensive system to streamline student results management. The system facilitates student registration, retrieval of student details, and management of module marks and grades, ensuring efficiency and accuracy in academic operations." }
         ],
         cv: {
-            education: ["Bachelor's in Software Engineering"],
+            education: ["Bachelor's in Computer Science"],
             experience: [
-                "Senior Full Stack Developer - 4 years",
-                "Backend Developer - 2 years"
+                "Computer Science undergraduate",
+                "Backend of the Mobile Aplication  Leader in FreshTrackSL"
             ],
-            skills: ["Full Stack Development", "API Design", "Database Management", "Web Security", "Performance Optimization"]
+            skills: ["Full Stack Development", "Python", "JAVA", "HTML5", "CSS3", "JavaScript", "MySQL", "Team Communication"]
         },
         cvPath: "/src/assets/cv/Nethmee.pdf"
     },

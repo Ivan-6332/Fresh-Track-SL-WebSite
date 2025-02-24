@@ -50,19 +50,20 @@ const teamMembers = {
         role: "Team Member",
         image: "/src/assets/team/Dinithi.jpg",
         largeImage: "/src/assets/team/Dinithi-large.jpg",
-        description: "Award-winning creative professional bringing designs to life. Dinithi excels in creating user-centric designs and implementing modern UI/UX principles.",
+        description: "I am Dinithi Viranda, a Computer Science Student. I thrive in fast- paced environments where I can contribute to impactful projects and grow professionally. I am eager to bring my skills, adaptability, and enthusiasm for learning to a dynamic team, seeking an opportunity to further develop my expertise and contribute to your organization’s success.",
         portfolio: [
-            { title: "UI/UX Design", description: "Created intuitive user interfaces for multiple high-traffic applications" },
-            { title: "Brand Development", description: "Led the design and implementation of brand identity systems" },
-            { title: "Interactive Experiences", description: "Developed engaging interactive web experiences" }
+            { title: "LIFE BELOW WATER WEBSITE ", description: "Created a dynamic educational website focused on marine conservation, using HTML5, CSS3, and JavaScript." },
+            { title: "STUDENT MANAGEMENTSYSTEM ", description: "Developed a comprehensive Java-based application for managing student records, including functionalities like student enrollment, grade tracking, and performance analysis." },
+            { title: "PERSONAL FINANCE TRACKER", description: "Designed a user-friendly finance tracking tool using Python to help individuals manage their budgets, track expenses, and achieve financial goals. " }
+
         ],
         cv: {
-            education: ["Bachelor's in Design", "UX Design Certification"],
+            education: ["Bachelor's in Computer Science"],
             experience: [
-                "Senior UI/UX Designer - 3 years",
-                "Creative Lead - 2 years"
+               "Frontend & Backend Developer  in FreshTrack-SL ",
+                "Computer Science undergraduate"
             ],
-            skills: ["UI Design", "UX Research", "Prototyping", "Visual Design", "User Testing"]
+            skills: ["UI Design", "UX Research", "Python", "Visual Design", "Web Development (HTML,CSS, Java Script)"]
         },
         cvPath: "/src/assets/cv/Dinithi.pdf"
     },
@@ -83,7 +84,6 @@ const teamMembers = {
             experience: [
                 "Computer Science undergraduate",
                 "Mobile Application and Fullstack developer in FreshTrackSL"
-
             ],
             skills: ["Programming languages(Java, Python)", "Web Development (HTML,CSS, Java Script)", "Front end (Angular, React)",  "Back end (Spring Boot, MySQL,NodeJs,PHP)"]
         },

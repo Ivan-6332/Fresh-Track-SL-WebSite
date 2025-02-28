@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";  // Import Link for navigation
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const teamMembers = [
-    { id: "ivan-de-zoysa", name: "Ivan De Zoysa", role: "Team Leader", image: "/src/assets/team/Ivan.jpg" },
-    { id: "parama-herath", name: "Parama Herath", role: "Team Member", image: "/src/assets/team/Parama.jpg" },
-    { id: "dinithi-viranda", name: "Dinithi Viranda", role: "Team Member", image: "/src/assets/team/Dinithi.jpg" },
-    { id: "gayantha-hathnagoda", name: "Gayantha Hathnagoda", role: "Team Member", image: "/src/assets/team/Gayantha.jpg" },
-    { id: "nethmee-mudannayaka", name: "Nethmee Mudannayaka", role: "Team Member", image: "/src/assets/team/Nethmee.jpg" },
-    { id: "dilshan-hirimuthugoda", name: "Dilshan Hirimuthugoda", role: "Team Member", image: "/src/assets/team/Dilshan.jpg" },
+    { id: "ivan-de-zoysa", name: "Ivan De Zoysa", role: "Team Leader", image: "/Fresh-Track-SL-WebSite/team/Ivan.jpg" },
+    { id: "parama-herath", name: "Parama Herath", role: "Team Member", image: "/Fresh-Track-SL-WebSite/team/Parama.jpg" },
+    { id: "dinithi-viranda", name: "Dinithi Viranda", role: "Team Member", image: "/Fresh-Track-SL-WebSite/team/Dinithi.jpg" },
+    { id: "gayantha-hathnagoda", name: "Gayantha Hathnagoda", role: "Team Member", image: "/Fresh-Track-SL-WebSite/team/Gayantha.jpg" },
+    { id: "nethmee-mudannayaka", name: "Nethmee Mudannayaka", role: "Team Member", image: "/Fresh-Track-SL-WebSite/team/Nethmee.jpg" },
+    { id: "dilshan-hirimuthugoda", name: "Dilshan Hirimuthugoda", role: "Team Member", image: "/Fresh-Track-SL-WebSite/team/Dilshan.jpg" },
 ];
 
 const Team = () => {

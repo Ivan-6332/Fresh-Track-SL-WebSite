@@ -5,8 +5,8 @@ const teamMembers = {
     'ivan-de-zoysa': {
         name: "Ivan De Zoysa",
         role: "Team Leader",
-        image: "/src/assets/team/Ivan.jpg",
-        largeImage: "/src/assets/team/Ivan-large.jpg",
+        image: "/Fresh-Track-SL-WebSite/team/Ivan.jpg",
+        largeImage: "/Fresh-Track-SL-WebSite/team/Ivan-large.jpg",
         description: "Team Leader of the Fresh Track SL Project",
         portfolio: [
             { title: "Project Leadership", description: "Led multiple successful projects in software development and system integration" },
@@ -48,8 +48,8 @@ const teamMembers = {
     'dinithi-viranda': {
         name: "Dinithi Viranda",
         role: "Team Member",
-        image: "/src/assets/team/Dinithi.jpg",
-        largeImage: "/src/assets/team/Dinithi-large.jpg",
+        image: "/Fresh-Track-SL-WebSite/team/Dinithi.jpg",
+        largeImage: "/Fresh-Track-SL-WebSite/team/Dinithi-large.jpg",
         description: "Award-winning creative professional bringing designs to life. Dinithi excels in creating user-centric designs and implementing modern UI/UX principles.",
         portfolio: [
             { title: "UI/UX Design", description: "Created intuitive user interfaces for multiple high-traffic applications" },
@@ -69,8 +69,8 @@ const teamMembers = {
     'gayantha-hathnagoda': {
         name: "Gayantha Hathnagoda",
         role: "Team Member",
-        image: "/src/assets/team/Gayantha.jpg",
-        largeImage: "/src/assets/team/Gayantha-large.jpg",
+        image: "/Fresh-Track-SL-WebSite/team/Gayantha.jpg",
+        largeImage: "/Fresh-Track-SL-WebSite/team/Gayantha-large.jpg",
         description: "Strategic marketing expert with a passion for brand storytelling. Gayantha brings expertise in digital marketing and brand development.",
         portfolio: [
             { title: "Marketing Strategy", description: "Developed comprehensive marketing strategies for various industries" },
@@ -90,8 +90,8 @@ const teamMembers = {
     'nethmee-mudannayaka': {
         name: "Nethmee Mudannayaka",
         role: "Team Member",
-        image: "/src/assets/team/Nethmee.jpg",
-        largeImage: "/src/assets/team/Nethmee-large.jpg",
+        image: "/Fresh-Track-SL-WebSite/team/Nethmee.jpg",
+        largeImage: "/Fresh-Track-SL-WebSite/team/Nethmee-large.jpg",
         description: "Full-stack developer extraordinaire, turning ideas into reality. Nethmee specializes in building robust and scalable applications.",
         portfolio: [
             { title: "Full Stack Development", description: "Developed end-to-end solutions for enterprise clients" },
@@ -111,8 +111,8 @@ const teamMembers = {
     'dilshan-hirimuthugoda': {
         name: "Dilshan Hirimuthugoda",
         role: "Team Member",
-        image: "/src/assets/team/Dilshan.jpg",
-        largeImage: "/src/assets/team/Dilshan-large.jpg",
+        image: "/Fresh-Track-SL-WebSite/team/Dilshan.jpg",
+        largeImage: "/Fresh-Track-SL-WebSite/team/Dilshan-large.jpg",
         description: "User experience specialist creating intuitive and engaging designs. Dilshan focuses on creating seamless user experiences through innovative design solutions.",
         portfolio: [
             { title: "UX Research", description: "Conducted user research and usability testing" },
